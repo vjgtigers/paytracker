@@ -1,0 +1,51 @@
+MySQL database set up
+
+
+
+schema: locationtracking
+
+tables
+
+account_info
+      id  int   (PK,NN,UQ,AI)
+      user_id varchar(45)
+      password varchar(45)
+      username varchar(45)
+      current_week_pay decimal(5,2)
+      current_weekend_pay decimal(5,2)
+      tax_rate_approx decimal(5,2)
+
+cookies_table
+      id int   (PK,NN,UQ,AI)
+      cookie varchar(45)
+      search_id varchar(45)
+      row_creation_time DATETIME CURRENT_TIMESTAMP
+
+function_usage
+      id int   (PK,NN,UQ,AI)
+      functName varchar(45)
+      startMills BIGINT
+      endMills BIGINT
+      startTime DATETIME
+      rowCreation DATETIME  CURRENT_TIMESTAMP
+      userid varchar(45)
+      typesucc varchar(45)
+      remote_addr varchar(45)
+      forwarded_for varchar(45)
+
+future_work_dates
+      id int   (PK,NN,UQ,AI)
+      date_info DATE
+      start_time DATETIME
+      end_time DATETIME
+      user_id varchar(45)
+      row_creation_date DATETIME CURRENT_TIMESTAMP
+
+past_payment_data
+      id int   (PK,NN,UQ,AI)
+      date_info DATE
+      hours decimal(5,2)
+      weekend tinyint //could be deprecated
+      user_id varchar(45)
+      row_creation_date DATETIME CURRENT_TIMESTAMP
+      hourly_pay decimal(5,2)
