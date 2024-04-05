@@ -5,3 +5,4 @@ also copy the new config.php file into the host folder for the paytracker folder
 
 
 set up the database
+use mysql workbench and open the DB_CREATOR script and run it
