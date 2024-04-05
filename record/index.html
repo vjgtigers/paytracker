@@ -1,105 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <link rel="stylesheet" href="../style.css">
+  <head>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <ul id="navList">
+      <li><a href="https://xerwai.com">Home</a></li>
+      <li><a href="../../locate">Location Tracking</a></li>
+      <li><a href="../">Payment Info</a></li>
+      <li><a href="../../help">Help</a></li>
+    </ul>
 
+    <!-- remove the need for asking for user id by using the cookie to get the id when submitted, this will reduce time and stuff. -->
 
+    <h2>Submit work info</h2>
+    <h2>Make sure to check if date is correct</h2>
 
-</head>
-<body>
+    <form
+      action="./record2.php"
+      onsubmit="return validateForm()"
+      method="post"
+      ,
+      name="payForm"
+    >
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" /><br />
 
-<ul id="navList">
-  <li><a href="https://xerwai.com">Home</a></li>
-  <li><a href="../../locate">Location Tracking</a></li>
-  <li><a href="../">Payment Info</a></li>
-  <li><a href="../../help">Help</a></li>
-</ul>
+      <label for="weekend">Weekend?</label>
+      <input type="checkbox" id="weekend" name="weekend" value="weekend" />
+      <br />
+      <label for="hours">Hours worked(float(Ex. 5.47)):</label>
+      <input type="text" id="hours" name="hours" value="" /><br />
 
+      <label for="pay">Hourly pay (float(Ex. 15.47)):</label>
+      <input type="text" id="pay" name="pay" value="" /><br />
 
-<!-- remove the need for asking for user id by using the cookie to get the id when submitted, this will reduce time and stuff. -->
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
 
+    <script>
+      function validateForm() {
+        let x = document.forms['payForm']['hours'].value
+        if (x > 127 || x <= 0) {
+          alert('Invalid Hours Amount')
+          return false
+        }
+        let useridLen = document.forms['payForm']['userid'].value
+        console.log(useridLen)
+        if (useridLen.length > 45) {
+          alert('User ID must be shorter than 45 characters')
+          return false
+        }
+        if (useridLen.length == 0) {
+          alert('Must include user id')
+          return false
+        }
+      }
 
-<h2>Submit work info</h2>
-<h2>Make sure to check if date is correct</h2>
+      function subtractHours(date, hours) {
+        date.setHours(date.getHours() - hours)
 
-<form action="./record2.php" onsubmit="return validateForm()" method="post", name="payForm">
-  <label for="date">Date:</label>
-  <input type="date" id="date" name="date"><br>
+        return date
+      }
 
-  <label for="weekend">Weekend?</label>
-<input type="checkbox" id="weekend" name="weekend" value="weekend">
-<br>
-  <label for="hours">Hours worked(float(Ex. 5.47)):</label>
-  <input type="text" id="hours" name="hours" value=""><br>
+      var mememe = new Date()
 
-  <label for="pay">Hourly pay (float(Ex. 15.47)):</label>
-  <input type="text" id="pay" name="pay" value=""><br>
+      const newDate = subtractHours(mememe, 4)
 
+      document.getElementById('date').valueAsDate = newDate
 
-<br>
-  <input type="submit" value="Submit">
-</form>
+      console.log(mememe)
+    </script>
 
-<script>
-
-function validateForm() {
-  let x = document.forms["payForm"]["hours"].value;
-  if (x > 127 || x <= 0) {
-    alert("Invalid Hours Amount");
-    return false;
-  }
-  let useridLen = document.forms["payForm"]["userid"].value;
-  console.log(useridLen)
-  if (useridLen.length > 45) {
-    alert("User ID must be shorter than 45 characters");
-    return false;
-}
-  if (useridLen.length == 0) {
-    alert("Must include user id");
-    return false;
-}
-
-
-
-
-}
-
-
-
-
-
-function subtractHours(date, hours) {
-  date.setHours(date.getHours() - hours);
-
-  return date;
-}
-
-
-
-
-
-
-var mememe = new Date();
-
-const newDate = subtractHours(mememe, 4);
-
-document.getElementById('date').valueAsDate = newDate;
-
-console.log(mememe);
-
-</script>
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br>
-
-
-
-
-
-
-
-</body>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </body>
 </html>
-

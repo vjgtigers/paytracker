@@ -1,5 +1,5 @@
 p {
-  color:white;
+  color: white;
 }
 
 ul {
@@ -9,7 +9,6 @@ ul {
   overflow: hidden;
   background-color: #333;
 }
-
 
 li {
   float: left;
@@ -37,37 +36,31 @@ body {
   padding-right: 16px;
   position: relative;
   float: right;
-  color:white;
+  color: white;
 }
 
-
 #mainContainer {
-    width: 100%;
-    overflow: hidden; /* will contain if #first is longer than #second */
+  width: 100%;
+  overflow: hidden; /* will contain if #first is longer than #second */
 }
 
 .box_test {
-    width: 300px;
-    height: 300px;
-    float:left; /* add this */
-    overflow: hidden;
-    border: 1px solid green;
-
-
+  width: 300px;
+  height: 300px;
+  float: left; /* add this */
+  overflow: hidden;
+  border: 1px solid green;
 }
 
 .centerme {
   text-align: center;
 }
 
-
 /* redisign for mobile fist. the boxsize boarder isnt changing in mobile becuase its alreay set. this a problem and coud set it all as class*/
 /* look at that just switched it to a class, shit works wonders, now to do the same for mobile*/
 /* change boarders so between doesnt have both*/
 
-
-
-@media (pointer:none), (pointer:coarse) {
+@media (pointer: none), (pointer: coarse) {
   body {
     background-color: #4f4f4f;
   }
@@ -75,7 +68,6 @@ body {
   p {
     font-size: 50px;
     color: Silver;
-
   }
 
   .box_test {
@@ -88,16 +80,11 @@ body {
     margin-bottom: 25px;
     margin-top: 25px;
     float: none;
-
-
-
-}
-#navBar {
-  overflow: hidden;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
-
-}
-
+  }
+  #navBar {
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+  }
 }
