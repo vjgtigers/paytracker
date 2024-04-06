@@ -41,7 +41,7 @@
   <div id="two" class="box_test"><p class="centerme">Upcoming Work Days</p><p id="future" class="centerme">Loading...</p></div>
   <div id="three" class="box_test"><p class="centerme">Recent Work Days (week)</p><p id="recent" class="centerme">Loading...</p></div>
   <div id="four" class="box_test"><p class="centerme">Extended Finance Info <br> All Time</p><p id="ef_info" class="centerme">Loading...</p></div>
-  <div id="six" class="box_test"><p class="centerme">V 1.1.0</p><p class="centerme">Donations:<br> <a href="../donations">CLICK ME</a><br>Developed by Vaughn Gugger</div>
+  <div id="six" class="box_test"><p class="centerme">V 1.1.0</p><p class="centerme">Donations:<br> <a href="../donations">CLICK ME</a><br>----------<br>Developed by Vaughn Gugger<br><a href="https://github.com/vjgtigers/paytracker">Github</a><br></div>
 </div>
 
 
