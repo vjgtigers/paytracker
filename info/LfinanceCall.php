@@ -49,7 +49,7 @@ $tax_multi = (abs($tax_rate-100))/100;
 
 $money = 0;
 $hours = 0;
-$result = $conn->execute_query('SELECT hours, hourly_pay FROM locationtracking.past_payment_data WHERE user_id = ?', [$userID]);
+$result = $conn->execute_query('SELECT hours, hourly_pay FROM locationtracking.past_payment_data WHERE user_id = ? and date_info >="'. date("Y") .'-00-00"' , [$userID]);
 
 $data2 =  array();
 $infodata = array();
