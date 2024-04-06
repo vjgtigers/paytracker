@@ -21,18 +21,9 @@ if(isset($_COOKIE['XERWAILOGIN'])) {
 echo 'version4<br>';
 echo htmlspecialchars($_POST["date"]);
 echo '<br>';
-$w = htmlspecialchars($_POST["weekend"]);
 $pay = htmlspecialchars($_POST["pay"]);
 
 echo '<br>';
-if ($w == "") {
-    echo "not weekend";
-    $weekend = 0;
-} else {
-    echo "weekend";
-    $weekend = 1;
-
-}
 
 
 
@@ -83,8 +74,8 @@ $result = $conn->execute_query('SELECT search_id FROM locationtracking.cookies_t
 
 
 
-$sql = "INSERT INTO past_payment_data (date_info, hours, weekend, user_id, hourly_pay)
-VALUES ('$date', '$hours', '$weekend', '$userID', '$pay')";
+$sql = "INSERT INTO past_payment_data (date_info, hours, user_id, hourly_pay)
+VALUES ('$date', '$hours', '$userID', '$pay')";
 
 
 
