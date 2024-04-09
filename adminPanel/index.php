@@ -14,9 +14,20 @@
  <p class="centerme PLarge TBMZ">Admin Panel</p>
 </div>
 
+<div id="MostCommon"> 
+  <p class="centerme">Most Common IP's (24 hours)</p>
+</div>
 
+<div id="userLookup"> 
+  <p class="centerme">User Look Up</p>
+</div>
 
-
+<div>
+  <p class="centerme">DangerZone</p>
+  <div>
+    <p>Shutdown</p>
+  </div>
+</div>
 
   </body>
 </html>
