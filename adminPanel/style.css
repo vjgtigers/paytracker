@@ -1,0 +1,114 @@
+p {
+    color: white;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+  
+  body {
+    background-color: black;
+  }
+  
+  #right_align {
+    padding-top: 14px;
+    padding-right: 16px;
+    position: relative;
+    float: right;
+    color: white;
+  }
+  
+  #mainContainer {
+    width: 100%;
+    overflow: hidden; /* will contain if #first is longer than #second */
+  }
+  
+  .box_test {
+    width: 300px;
+    height: 300px;
+    float: left; /* add this */
+    overflow: hidden;
+    border: 1px solid green;
+  }
+  
+  .centerme {
+    text-align: center;
+  }
+
+  .red_body {
+    background-color: red;
+    position:fixed;
+    top: 0px;
+    width:100%;
+  }
+  .PLarge {
+    font-size: 40px;
+  }
+  .TBMZ {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .rb {
+    border: 1px solid blue;
+  }
+  .rel {
+    position: relative;
+  }
+  #navBar {
+    margin:0;
+    padding: 0;
+  }
+  /* redisign for mobile fist. the boxsize boarder isnt changing in mobile becuase its alreay set. this a problem and coud set it all as class*/
+  /* look at that just switched it to a class, shit works wonders, now to do the same for mobile*/
+  /* change boarders so between doesnt have both*/
+  
+  @media (pointer: none), (pointer: coarse) {
+    body {
+      background-color: #4f4f4f;
+    }
+  
+    p {
+      font-size: 50px;
+      color: Silver;
+    }
+  
+    .box_test {
+      background-color: black;
+      border-radius: 25px;
+      border: 5px solid DimGray;
+      width: 92%;
+      height: auto;
+      margin: auto;
+      margin-bottom: 25px;
+      margin-top: 25px;
+      float: none;
+    }
+    #navBar {
+      overflow: hidden;
+      position: fixed; /* Set the navbar to fixed position */
+      top: 0; /* Position the navbar at the top of the page */
+      width: 100%; /* Full width */
+    }
+  }
+  
