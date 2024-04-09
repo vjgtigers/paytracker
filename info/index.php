@@ -53,6 +53,7 @@
 
 $.getJSON("userCall.php", function(data){
  console.log(data);
+if (data == "0 results") {window.location.replace("https://xerwai.com/paytracking/login/?r=3");}
 document.getElementById("right_align").innerHTML="User: " + data;
 
 

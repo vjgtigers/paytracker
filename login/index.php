@@ -57,6 +57,10 @@ document.getElementById("redirect_reason").innerHTML = 'Attempted to view info p
 
 document.getElementById("redirect_reason").innerHTML = 'Successfully logged out. <br>Please come again';
 
+} else if (urlParams.get('r') == "3") {
+
+document.getElementById("redirect_reason").innerHTML = 'Session no longer valid. Please log back in';
+
 }
 
 console.log("tset sucessuf");
