@@ -32,7 +32,7 @@ die();
 
 echo "<br>";
 
-include '../../config.php';
+include '../config.php';
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection

@@ -13,8 +13,8 @@ if(isset($_COOKIE['XERWAILOGIN'])) {
 $startTime = time();
 $dttime = date("Y-m-d H:i:s",$startTime);
 $fname = "quickFinance";
-include '../../config.php';
 
+include '../config.php';
 include '../recordTime.php';
 
 

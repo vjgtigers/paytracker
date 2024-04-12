@@ -40,8 +40,8 @@ echo '<br>';
 $startTime = time();
 $dttime = date("Y-m-d H:i:s",$startTime);
 $fname = "recordPage";
-include '../../config.php';
 
+include '../config.php';
 include '../recordTime.php';
 
 //db connection

@@ -9,7 +9,7 @@ $pass = htmlspecialchars($_POST["password"]);
 $startTime = time();
 $dttime = date("Y-m-d H:i:s",$startTime);
 $fname = "loginPage";
-include '../../config.php';
+include '../config.php';
 
 include '../recordTime.php';
 

@@ -28,8 +28,8 @@ foreach ($array3 as $key => $val) {
 $startTime = time();
 $dttime = date("Y-m-d H:i:s",$startTime);
 $fname = "recordFuture";
-include '../../config.php';
 
+include '../config.php';
 include '../recordTime.php';
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
